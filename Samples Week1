@@ -1,0 +1,284 @@
+// console.log("hello World");
+// const hello = "hello World";
+// console.log(hello);
+// hello = "Hello Suyati";
+
+
+
+// The let Keyword - Block Scope
+
+// var b1 = 5;
+
+// if (true) {
+//   var b1 = 10;
+//   console.log(b1);
+// }
+
+// console.log(b1);
+
+// let b2 = 5;
+
+// if (true) {
+//   let b2 = 10;
+
+//   console.log(b2);
+// }
+
+// console.log(b2);
+
+// END: The let Keyword - Block Scope
+
+
+
+// The let Keyword - Hoisting
+// console.log(c1);
+// var c1 = 5;
+
+// console.log(c2);
+// let c2 = 5; // ReferenceError: Cannot access 'c2' before initialization
+
+// END: The let Keyword - Hoisting
+
+
+
+// The let Keyword - A step towards closure
+// var div,
+//   container = document.getElementById("container");
+
+// for (var i = 0; i < 3; i++) {
+//   div = document.createElement("div");
+//   div.onclick = () => {
+//     alert("This is box #" + i);
+//   };
+//   container.appendChild(div);
+// }
+
+// for (let j = 3; j < 6; j++) {
+//   div = document.createElement("div");
+//   div.onclick = () => {
+//     alert("This is box #" + j);
+//   };
+//   container.appendChild(div);
+// }
+
+// END: The let Keyword
+
+
+// // Template Strings
+
+// const firstName = "Shibin";
+// const lastName = "M";
+
+// console.log(`Fulle Name: ${firstName} Lalu ${lastName}`);
+
+// // END: Template Strings
+
+
+
+// // Default Parameters
+
+// function sayHello (param1, param2 = "Default Param2")  {
+//   console.log(`${param1}, ${param2}`);
+// }
+// sayHello("Suyati");
+// sayHello("param1","param2");
+// sayHello("","");
+
+// // END: Default Parameters
+
+
+// const object1 = {
+//     Name: "Shibin",
+//     Address: "Kannur",
+//     Office: "Suyati"
+//   };
+
+
+
+//   const {Name} = object1;
+//   console.log(Name);
+
+
+
+
+// Arrow Functions
+// const display = entity => `${entity}`;
+
+// console.log(display("First method using Arrow function"));
+
+// const customGreet = (greet, entity) => {
+//     if (!greet) {
+//         greet = "Hello";
+//     }
+
+//     if (!entity) {
+//         entity = "World";
+//     }
+
+//     return `${greet}, ${entity}`;
+// };
+
+// console.log(customGreet("", "Shibin"));
+
+// const DisplayTwo = (param1, param2 = "Param2") => {
+
+//     return `${param1}, ${param2}`;
+
+// };
+
+// console.log("param1");
+// console.log("param1", 'p2');
+
+// END: Arrow Functions
+
+
+// Arrow Functions - A closure
+
+// const triveni1 = {
+//   rivers: ["Ganga", "Yamuna", "Saraswati"],
+//   display: function(delay = 1000) {
+//     setTimeout(function() {
+//       console.log(this.rivers.join(", "));
+//     }, delay);
+//   }
+// };
+
+// triveni1.display(); // Uncaught TypeError: Cannot read property 'join' of undefined
+
+// const leader = {
+//     Leaders: ["Modi", "Gadndhi", "Pinarayi"],
+//     display: function (delay = 1) {
+//       setTimeout(() => {
+//         console.log(this.Leaders.join(", "));
+//       }, delay);
+//     },
+//   };
+  
+//   leader.display(3600);
+//   leader.display();
+  
+  // END: Arrow Functions - A closure
+
+
+
+
+  // Destructuring Objects
+
+//   const myAddress = {
+//     houseName: "LOPAMUDRA",
+//     street: "KOTTICHIRAPADAM",
+//     place: "N PARAVUR",
+//     district: "ERNAKULAM",
+//     state: "KERALA",
+//     country: "INDIA"
+//   };
+
+//   const { state, country } = myAddress;
+
+//   console.log(state, country);
+
+
+//   const printHouseName1 = (myAddress) => {
+//     console.log(`My house name is ${myAddress.houseName}`);
+//   }
+//   printHouseName1(myAddress);
+
+//   // Personally, I don't prefer this
+//   const printHouseName2 = ({ houseName }) => {
+//     console.log(`My house name is ${houseName}`);
+//   }
+//   printHouseName2(myAddress);
+
+  // END: Destructuring Objects
+
+
+
+
+// Destructuring Arrays
+
+// const nicknames = ["Master Blaster", "God of the Off Side", "","The Wall"];
+
+// const [sachin] = nicknames;
+// console.log(`Sachin's nickname is ${sachin}`);
+
+// const [, sourav, ] = nicknames;
+// console.log(`Sourav's nickname is ${sourav}`);
+
+// const[,,,dravid] = nicknames;
+
+// console.log(`Darvid's nick name is ${dravid}`);
+
+// END: Destructuring Arrays
+
+
+// Object Literal Enhancement
+
+// const  street = "Kuthuparamba",
+//   place = "Nirmalagiri",
+//   district = "Kannur";
+
+// const myAddress1 = {
+//   housename:"shimna nivas",
+//   street,
+//   place,
+//   district,
+//   printHouseName() {
+//     console.log(`My house name is ${this.houseName}`);
+//   },
+// };
+
+// console.log(myAddress1);
+// myAddress1.printHouseName();
+// console.log(myAddress1. street);
+// console.log( street);
+// console.log( myAddress1.housename  );
+
+// END: Object Literal Enhancement
+
+
+// The Spread Operator
+
+const south = [
+    "Kerala",
+    "Andaman and Nicobar",   
+  ];
+  const north = [
+    "Chandigarh",
+    "Delhi",    
+  ];
+  
+   const southAndNorth = [south,north];
+   console.log(`SouthNorth States: ${southAndNorth.join(", ")}`);
+
+    
+  const spreadSouthAndNorth = [...south,...north];
+  console.log(`SouthNorth States: ${spreadSouthAndNorth.join(", ")}`);
+  
+  const [first,second, ...others] = southAndNorth;
+  console.log(`first: ${first}`);
+  console.log(`second: ${second.join(", ")}`);
+  console.log(`Other states: ${others.join(", ")}`);
+
+  const [ss1,ss2, ...ssothers] = spreadSouthAndNorth;
+  console.log(`ss1: ${ss1}`);
+  console.log(`ss2: ${ss2}`);
+  console.log(`ssothers states: ${ssothers.join(", ")}`);
+  //console.log(`ss2 Join: ${ss2.join(", ")}`);
+  
+
+  //This will throw erro: Rest element must be last element
+//   const [...others3,remaining] = spreadSouthAndNorth;
+//   console.log(`others3: ${others3.join(", ")}`);
+//   console.log(`ss2: ${remaining}`);
+  
+ 
+//   const southOfKerala = (...districts) => {
+//     const [southEast, ...rest] = districts;
+//     console.log(`Southest district of Kerala is ${southEast}.`);
+//   }
+//   southOfKerala("Thiruvananthapuram", "Kollam", "Pathanamthitta");
+  
+  // END: The Spread Operator
+
+  
+  
