@@ -1,0 +1,7 @@
+Assignments
+1. Compilation of workshop examples. 
+2. Write method to do shallow copy of alist using ES6 feature. 
+3. Write method to do shallow copy of an object using ES6 feature. 
+4. Write method to do deep copy of alist without using any third party library. 
+5. Write method to do deep copy of aobject without using any third partylibrary. 
+6. Is the Fetch API an ECMAScript feature ?
