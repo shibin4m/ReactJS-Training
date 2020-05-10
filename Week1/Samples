@@ -1,0 +1,6 @@
+Write method to do shallow copy of alist using ES6 feature.
+
+Write method to do shallow copy of an object using ES6 feature. 
+Write method to do deep copy of alist without using any third party library. 
+Write method to do deep copy of aobject without using any third partylibrary. 
+Is the Fetch API an ECMAScript feature ? No. It's part of the Web platform API defined by the standards bodies WHATWG and W3C. The various objects that implement the Fetch API are "host objects"
