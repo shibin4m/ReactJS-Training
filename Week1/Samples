@@ -1,6 +1,35 @@
 Write method to do shallow copy of alist using ES6 feature.
 
+ // shallow copy of alist using ES6 feature
+
+ const array = ['A','B','C']
+
+ const copyWithEquals = array // Changes to array will change copyWithEquals
+ console.log(copyWithEquals === array) // true (The assignment operator did not make a copy)
+ 
+ const copyWithSpread = [...array] // Changes to array will not change copyWithSpread
+ console.log(copyWithSpread === array) // false (The spread operator made a shallow copy)
+ 
+ array[0] = 'D' 
+ 
+ console.log(array) // ["D", "B", "C"]
+ console.log(...array) // DBC
+ console.log(...copyWithEquals) // DBC
+ console.log(...copyWithSpread) // ABC
+
+   // END: shallow copy of alist using ES6 feature
+
 Write method to do shallow copy of an object using ES6 feature. 
+  const Employee = { Name: 'shibin', Phone: '88933' };
+
+  const cloneEmployee = {...Employee};
+
+
+
+  cloneEmployee.Name = 'Shibin Update';
+  console.log(Employee);
+  console.log(cloneEmployee);
+
 Write method to do deep copy of alist without using any third party library. 
 Write method to do deep copy of aobject without using any third partylibrary. 
 Is the Fetch API an ECMAScript feature ? No. It's part of the Web platform API defined by the standards bodies WHATWG and W3C. The various objects that implement the Fetch API are "host objects"
