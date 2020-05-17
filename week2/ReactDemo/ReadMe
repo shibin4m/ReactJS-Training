@@ -1,1 +1,9 @@
 
+Run solution and use http://localhost:5000/contact
+Showing Contact in .Net core application contains the changes in
+Controllers\ContactController.cs
+Views\Contact
+wwwroot\js\contact.jsx
+
+
+Reference: https://reactjs.net/tutorials/aspnetcore.html
