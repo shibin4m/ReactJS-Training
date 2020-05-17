@@ -1,0 +1,42 @@
+Fragments: 
+A common pattern in React is for a component to return multiple elements. Fragments let you group a list of children without adding extra nodes to the DOM.
+Reference: https://reactjs.org/docs/fragments.html#short-syntax
+
+Sample:
+
+<div id="root"/>
+<script src="https://unpkg.com/react/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+
+<script type="text/babel">
+  class Table extends React.Component {
+  render() {
+    return (
+      <table>
+        <tr>
+      <th>Name</th>
+      <th>Email</th>
+       </tr>
+        <tr>
+          <Columns />
+        </tr>
+      </table>
+    );
+  }
+}
+  
+  class Columns extends React.Component {
+  render() {
+    return (
+    //To render td elements we may need to use <div> element that will cause invalid HTML also there will an additional node in DOM. By using Fragment rednering will be valid and there will not be any additional node in DOM.
+    // short form of fragment <> </>
+    <React.Fragment>
+        <td>Shibin</td>
+        <td>shibinvas@gmail.com</td>
+     </React.Fragment>
+    );
+  }
+}
+  ReactDOM.render(<Table/>, document.getElementById('root'));
+</script>
