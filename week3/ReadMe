@@ -1,0 +1,6 @@
+Assignments
+
+Demonstrate retrieving data from Context Consumer without using 'useContext' hook.
+Write an example of 'Uncontrolled Component' using 'refs' feature.
+    https://css-tricks.com/working-with-refs-in-react/
+Write an example of 'Stateful Component' using Class Component feature.
